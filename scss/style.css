@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  vertical-align: top;
+}
+
+body {
+  background-image: url(../img/00_backgound_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contentsWrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1023px) {
+  .contentsWrap {
+    min-width: 360px;
+  }
+}
+.contentsWrap .section1Wrap {
+  display: flex;
+  margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section1Wrap {
+    flex-direction: column;
+  }
+}
+.contentsWrap .section1Wrap .section1-1,
+.contentsWrap .section1Wrap .section1-2 {
+  width: 500px;
+  height: 580px;
+  margin: 10px 0;
+}
+.contentsWrap .section1Wrap .section1-1 {
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 {
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  white-space: nowrap;
+  text-align: center;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 a img {
+  width: 100%;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox {
+  background-color: plum;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox,
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox {
+    position: fixed;
+    z-index: 10;
+    width: 140px;
+    height: 140px;
+  }
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .logoBox img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .logoBox img {
+  width: 100%;
+  border-radius: 20px;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 {
+  margin-left: 10px;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1,
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 {
+    top: 50%;
+    left: -3.7%;
+  }
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox1 img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox1 img {
+  width: 120%;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox2,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox2 {
+  top: 0;
+  left: 0;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 {
+  margin-left: 10px;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap1 .section1-gameBox3,
+  .contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap1 .section1-gameBox3 {
+    top: 0;
+    left: 47.3%;
+  }
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 {
+  display: flex;
+  flex: 1;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4 {
+  width: 100%;
+  height: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gold;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4 a img {
+  width: 100%;
+  height: 100%;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox1_wrap2 .section1-gameBox4:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox1_wrap2 .section1-gameBox4:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap {
+  width: 100%;
+  height: 100%;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5 {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5:hover,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5:hover p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5:hover p {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5:hover img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5 a,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5 a p,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox1 .section1-contentsBox2_wrap .section1-gameBox5 a img,
+.contentsWrap .section1Wrap .section1-1 .section1-contentsBox2 .section1-contentsBox2_wrap .section1-gameBox5 a img {
+  width: 100%;
+}
+.contentsWrap .section1Wrap .section1-2 {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section1Wrap .section1-2 {
+    margin: 0 0 10px 0;
+  }
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  margin-right: 10px;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox1_wrap .section2-gameBox6 a img {
+  width: 100%;
+  height: 100%;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap {
+  width: 200px;
+  height: 100%;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7 {
+  width: 100%;
+  height: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-gameBox7 a img {
+  width: 100%;
+  height: 100%;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9 {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8:hover,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9:hover {
+  transform: scale(1.04);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8:hover p,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8:hover img,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9:hover img {
+  filter: brightness(0.7);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8 a,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8 a p,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9 a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox8 a img,
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9 a img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox2_wrap .section2-contentsBox3_wrap .section2-gameBox9 {
+  margin-top: 10px;
+}
+.contentsWrap .section1Wrap .section1-2 .section2-contentsBox3_wrap {
+  width: 300px;
+  height: 300px;
+}
+.contentsWrap .section2Wrap {
+  width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  flex-direction: column;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section2Wrap {
+    max-width: 500px;
+  }
+}
+.contentsWrap .section2Wrap .section2-1,
+.contentsWrap .section2Wrap .section2-2 {
+  width: 100%;
+  margin-top: 0;
+}
+.contentsWrap .section2Wrap .section2-1 ul,
+.contentsWrap .section2Wrap .section2-2 ul {
+  display: flex;
+  gap: 10px;
+}
+.contentsWrap .section2Wrap .section2-1 ul:last-child,
+.contentsWrap .section2Wrap .section2-2 ul:last-child {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section2Wrap .section2-1 ul,
+  .contentsWrap .section2Wrap .section2-2 ul {
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.contentsWrap .section2Wrap .section2-1 ul li,
+.contentsWrap .section2Wrap .section2-2 ul li {
+  width: 117.5px;
+  height: 117.5px;
+  background-color: pink;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.contentsWrap .section2Wrap .section2-1 ul li:hover,
+.contentsWrap .section2Wrap .section2-2 ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+}
+.contentsWrap .section2Wrap .section2-1 ul li:hover p,
+.contentsWrap .section2Wrap .section2-2 ul li:hover p {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.contentsWrap .section2Wrap .section2-1 ul li:hover img,
+.contentsWrap .section2Wrap .section2-2 ul li:hover img {
+  filter: brightness(0.9);
+}
+.contentsWrap .section2Wrap .section2-1 ul li a,
+.contentsWrap .section2Wrap .section2-2 ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contentsWrap .section2Wrap .section2-1 ul li a p,
+.contentsWrap .section2Wrap .section2-2 ul li a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.contentsWrap .section2Wrap .section2-1 ul li a img,
+.contentsWrap .section2Wrap .section2-2 ul li a img {
+  width: 100%;
+}
+.contentsWrap .section2Wrap .section2-1 ul:last-child, .contentsWrap .section2Wrap .section2-1 ul:first-child,
+.contentsWrap .section2Wrap .section2-2 ul:last-child,
+.contentsWrap .section2Wrap .section2-2 ul:first-child {
+  margin-right: 10px;
+}
+@media (max-width: 1023px) {
+  .contentsWrap .section2Wrap .section2-1 ul:last-child, .contentsWrap .section2Wrap .section2-1 ul:first-child,
+  .contentsWrap .section2Wrap .section2-2 ul:last-child,
+  .contentsWrap .section2Wrap .section2-2 ul:first-child {
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

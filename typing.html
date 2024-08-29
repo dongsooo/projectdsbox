@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Master</title>
+    <script src="/node_modules/toastify-js/src/toastify.js"></script>
+    <script src="/node_modules/axios/dist/axios.js"></script>
+    <link rel="stylesheet" href="/node_modules/toastify-js/src/toastify.css" />
+    <link rel="stylesheet" href="/CSS/typing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=New+Amsterdam&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bodyWrap">
+        <div class="logoBox-wrap">
+          <div class="logoBox">
+            <a href="/index.html"><img src="/img/00_logo.png" alt="" /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/puzzle.html"
+              ><img src="/img/01_game_img4.png" alt=""
+            /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/shooting.html"
+              ><img src="/img/01_game_img6.avif" alt=""
+            /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/tetris.html"
+              ><img src="/img/01_game_img5.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="contentsWrap">
+          <div class="word-display new-amsterdam-regular">Hello</div>
+          <div class="word-input-box">
+            <input type="text" class="word-input" disabled />
+          </div>
+          <div class="game-info">
+            <div class="black-han-sans-regular">
+              남은시간 : <span class="time">0</span>초
+            </div>
+            <div class="black-han-sans-regular">
+              획득점수 : <span class="score">0</span>점
+            </div>
+          </div>
+          <button class="button loading black-han-sans-regular" onclick="run()">
+            게임을 불러오는 중...
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/JS/typing.js"></script>
+  </body>
+</html>

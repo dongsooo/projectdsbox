@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tetris</title>
+    <link rel="stylesheet" href="/CSS/tetris.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="score-board">Score: 0</div>
+      <div id="game-container">
+        <div class="logoBox-wrap">
+          <div class="logoBox">
+            <a href="/index.html"><img src="/img/00_logo.png" alt="" /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/puzzle.html"
+              ><img src="/img/01_game_img4.png" alt=""
+            /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/shooting.html"
+              ><img src="/img/01_game_img6.avif" alt=""
+            /></a>
+          </div>
+          <div class="logoBox">
+            <a href="/typing.html"
+              ><img src="/img/01_game_img7.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <canvas id="tetris"></canvas>
+        <div id="next-block">
+          <h3>Next Block</h3>
+        </div>
+      </div>
+      <div id="game-over"><img src="/img/02_gameover_img2.png" alt="" /></div>
+      <button id="start-button">
+        <img src="/img/02_start_img.png" alt="" />
+      </button>
+      <button id="restart-button" style="display: none">
+        <img src="/img/02_replay_img.png" alt="" />
+      </button>
+    </div>
+    <script src="/JS/tetris.js"></script>
+  </body>
+</html>

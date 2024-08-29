@@ -1,0 +1,163 @@
+/* CSS 스타일링 */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-image: url(../img/00_backgound_img2.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#score-board {
+  font-family: "Press Start 2P", cursive; /* 디지털 폰트 사용 */
+  font-size: 24px; /* 폰트 크기 조정 */
+  color: white; /* 텍스트 색상 */
+  text-shadow: 1px 1px 2px black; /* 텍스트에 그림자 추가 */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#game-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#tetris {
+  border: 1px solid rgb(185, 185, 185);
+  background-color: rgba(255, 255, 255, 0.51);
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+
+#next-block {
+  border: 1px solid rgb(185, 185, 185);
+  padding: 10px;
+  width: 100px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.51);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#next-block > h3 {
+  color: white;
+}
+
+#next-block canvas {
+  display: block; /* 캔버스가 블록을 정확히 맞추도록 설정 */
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 10px;
+}
+#game-over {
+  position: absolute;
+  width: 320px;
+  height: 300px;
+  top: 45%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: none; /* 기본적으로 숨겨져 있도록 설정 */
+  z-index: 10; /* 캔버스 위에 표시되도록 설정 */
+}
+
+#game-over img {
+  position: absolute;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+
+#start-button {
+  position: absolute;
+  top: 54%;
+  left: 50.6%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 70px;
+}
+
+#start-button img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#restart-button {
+  position: absolute;
+
+  width: 250px;
+  height: 70px;
+  top: 70%;
+  left: 50.6%;
+  transform: translate(-50%, -50%);
+
+  /* overflow: hidden; */
+}
+
+#restart-button img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoBox-wrap {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logoBox {
+  width: 140px;
+  height: 140px;
+  background-color: plum;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  transition: all 0.3s;
+}
+
+.logoBox:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+  filter: brightness(0.7);
+}
+
+.logoBox > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logoBox img {
+  width: 100%;
+  height: 100%;
+}

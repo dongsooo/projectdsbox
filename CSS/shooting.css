@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video {
+  vertical-align: top;
+}
+
+body {
+  overflow-y: hidden;
+  background-image: url(/img/00_backgound_img4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentsWrap {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  background-image: url(/img/04_Shooting_img2.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border: 3px solid plum;
+}
+
+canvas {
+  margin: 0 auto;
+
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  border: transparent;
+  background-color: transparent;
+}
+
+#startButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#restartButton {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.logoBox-wrap {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 12em; */
+  margin-right: 10px;
+  gap: 10px;
+}
+
+.logoBox {
+  width: 140px;
+  height: 140px;
+  background-color: plum;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  transition: all 0.3s;
+}
+
+.logoBox:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 3px 1px 1px rgba(108, 108, 108, 0.5);
+  filter: brightness(0.7);
+}
+
+.logoBox > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logoBox img {
+  width: 100%;
+  height: 100%;
+}
