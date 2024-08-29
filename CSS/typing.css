@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/img/03_Typing_img1.avif);
+  background-image: url(../img/03_Typing_img1.avif);
 }
 
 .wrap {

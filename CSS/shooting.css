@@ -19,7 +19,7 @@ video {
 
 body {
   overflow-y: hidden;
-  background-image: url(/img/00_backgound_img4.jpg);
+  background-image: url(../img/00_backgound_img4.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body {
   position: relative;
   width: 400px;
   height: 700px;
-  background-image: url(/img/04_Shooting_img2.avif);
+  background-image: url(../img/04_Shooting_img2.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
