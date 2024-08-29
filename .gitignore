@@ -1,0 +1,22 @@
+
+.DS_Store
+node_modules/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS-specific files
+.DS_Store
+
+# Environment variables
+.env
+node_modules/
+dist/
+build/
+.DS_Store
+.env
+.DS_Store
